@@ -7,6 +7,7 @@ using ExitGames.Client.Photon;
 public class Antis : MonoBehaviour
 {
     private static List<PhotonPlayer> IgnoredSenders = new List<PhotonPlayer>();
+    
     private static Dictionary<string, int> RPCs = new Dictionary<string, int>();
 
     private static readonly List<string> IgnoredRPCsToSpam = new List<string>() 
