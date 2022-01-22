@@ -1,4 +1,4 @@
-if (inputLine == "/clear")
+if (inputLine == "/clearall")
 {
     if (PhotonNetwork.isMasterClient)
     {
