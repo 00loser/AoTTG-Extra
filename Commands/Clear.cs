@@ -5,6 +5,7 @@ if (inputLine == "/clear")
         for (int i = 0; i <= 14; i++)
         {
             string text = (i == 14) ? "Chat cleaned":string.Empty;
+            FengGameManagerMKII.instance.photonView.RPC("Chat", PhotonTargets.All, new object[]{ text, string.Empty });
         }
     }
     else
