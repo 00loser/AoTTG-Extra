@@ -1,4 +1,5 @@
 //A "extension" for Logger.cs
+
 using System;
 public static class Logs
 {
