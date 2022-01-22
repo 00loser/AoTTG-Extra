@@ -65,7 +65,7 @@ public class Antis : MonoBehaviour
         //Checking spam
         if (RPCs[info] > 25 && !IgnoredRPCsToSpam.Contains(RPCName))
         {
-            Logger.ANTIS(RPCName + " Spam from: " + sender.ID.ToString()); //U can call your own logger
+            Logs.LogInfo(RPCName + " Spam from: " + sender.ID.ToString());
             IgnoredSenders.Add(sender);
             return true;
         }
