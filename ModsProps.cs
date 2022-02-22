@@ -2,7 +2,7 @@ using System.Text;
 using System.Collections.Generic;
 public static class ModsProps
 {
-	private static readonly Dictionary<string, string> Props = new Dictionary<string, string>(1) //set dict size to the amount of props u r gonna use
+	private static readonly Dictionary<string, string> Props = new Dictionary<string, string>(1) //dictionary length
 	{
 		{ "GuardianMod", "[00ffff]{Guardian}" } // prop key, in game display
 	};
@@ -20,6 +20,33 @@ public static class ModsProps
 				added++;
 			}
 		}
-		return builder.ToString().hexColor(); //what's hexcolor ¿?
+		return builder.ToString().hexColor();
+		/*
+		public static string hexColor(this string text)
+		{
+			if (text.Contains("]"))
+				text = text.Replace("]", ">");
+			bool flag = false;
+			while (text.Contains("[") && !flag)
+			{
+				int num = text.IndexOf("[");
+				if (text.Length >= num + 7)
+				{
+					string text2 = text.Substring(num + 1, 6);
+					text = text.Remove(num, 7).Insert(num, "<color=#" + text2);
+					int startIndex = text.Length;
+					if (text.Contains("["))
+						startIndex = text.IndexOf("[");
+					text = text.Insert(startIndex, "</color>");
+				}
+				else
+					flag = true;
+		}
+		if (flag)
+			return string.Empty;
+		return text;
+		}
+
+		*/
 	} 
 }
